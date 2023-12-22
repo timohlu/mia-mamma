@@ -35,7 +35,7 @@ main {
 }
 
 .title {
-  font-size: 25vw;
+  font-size: 15vh;
   color: #3e4d9b;
   transform: translateY(-200px);
   text-align: center;
