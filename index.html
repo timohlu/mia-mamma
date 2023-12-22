@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MIA MAMMA!</title>
-  <style rel="stylesheet" src="/style.css"></style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+  <main>
+    <div class="hero">
+      <p class="title">MIA MAMMA!</p>
+      <img src="/imges/Woman.png" alt="" class="woman">
+    </div>
+    <div class="content">
+      <p class="text big">Save the Date</p>
+      <p class="text">Wir gehen zusammen am 26. Oktober 2024 ans "Mamma Mia!" musical.</p>
+      <a class="text link"
+        href="https://stripo.email/storage/ics/2023/12/ics_mamma-mia-2023-12-22-120828.ics">Kalender</a>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const womanImage = document.querySelector('.woman');
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        womanImage.style.top = `${250 - scrollY / 2}px`; // Adjust the starting position and division factor
+      });
+
+      const textElements = document.querySelectorAll('.text');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)'; // Move the paragraph upward
+            }, index * 200); // Adjust the delay between paragraphs (in milliseconds)
+          }
+        });
+      }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+      textElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
 </body>
+
 </html>
