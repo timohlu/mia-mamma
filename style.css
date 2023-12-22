@@ -12,7 +12,7 @@
 body {
   background-color: white;
   font-family: Rojal;
-  height: 200vh;
+  height: 150vh;
   overflow-x: hidden;
 }
 
@@ -27,8 +27,7 @@ main {
 
 .hero {
   position: relative;
-  height: 50%;
-  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +49,7 @@ main {
 }
 
 .content {
-  height: 50%;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
