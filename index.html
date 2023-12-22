@@ -38,39 +38,7 @@
             setTimeout(() => {
               entry.target.style.opacity = '1';
               entry.target.style.transform = 'translateY(0)'; // Move the paragraph upward
-            }, index * 200); // Adjust the delay between paragraphs (in milliseconds)
-          }
-        });
-      }, { threshold: 0.5 }); // Adjust the threshold as needed
-
-      textElements.forEach(element => {
-        observer.observe(element);
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const womanImage = document.querySelector('.woman');
-
-      // Gyroscope event listener
-      window.addEventListener('deviceorientation', function (event) {
-        const tiltX = event.gamma; // Adjust the property based on your preference
-        const tiltY = event.beta; // Adjust the property based on your preference
-
-        // Apply parallax effect to the woman image
-        womanImage.style.transform = `translate(${tiltX}px, ${tiltY}px)`;
-      });
-
-      const textElements = document.querySelectorAll('.text');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = '1';
-              entry.target.style.transform = 'translateY(0)'; // Move the paragraph upward
-            }, index * 200); // Adjust the delay between paragraphs (in milliseconds)
+            }, index * 100); // Adjust the delay between paragraphs (in milliseconds)
           }
         });
       }, { threshold: 0.5 }); // Adjust the threshold as needed

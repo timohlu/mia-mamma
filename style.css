@@ -54,19 +54,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6%;
 }
 
 .text {
-  font-size: 1.1em;
+  max-width: 75%;
+  font-size: 1.5em;
   font-family: helvetica;
   color: #3e4d9b;
   opacity: 0;
-  transition: transform 1000ms;
+  transition: 700ms;
   transform: translateY(50px);
-  line-height: 2;
+  line-height: 1.2;
   text-align: left;
   font-weight: 600;
+  opacity: 0;
 }
 
 .big {
