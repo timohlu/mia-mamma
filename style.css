@@ -54,7 +54,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding: 6%;
 }
 
@@ -63,7 +63,7 @@ main {
   font-family: helvetica;
   color: #3e4d9b;
   opacity: 0;
-  transition: 1000ms;
+  transition: transform 1000ms;
   transform: translateY(50px);
   line-height: 2;
   text-align: left;
@@ -71,11 +71,12 @@ main {
 }
 
 .big {
-  font-size: 10vw;
+  font-size: 3em;
   font-family: Rojal;
   line-height: 1.3;
 }
 
 .link {
   text-decoration: underline;
+  margin-top: 30px;
 }
