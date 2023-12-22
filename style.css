@@ -34,6 +34,11 @@ main {
   position: relative;
 }
 
+.title-div {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   font-size: 15vh;
   color: #3e4d9b;
@@ -80,4 +85,16 @@ main {
 .link {
   text-decoration: underline;
   margin-top: 30px;
+}
+
+@media screen and (min-width: 900px) {
+  .title-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .title {
+    font-size: 15vh;
+  }
 }
