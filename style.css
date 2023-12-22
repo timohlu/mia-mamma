@@ -37,7 +37,8 @@ main {
 .title {
   font-size: 25vw;
   color: #3e4d9b;
-  transform: translateY(-130px);
+  transform: translateY(-150px);
+  text-align: center;
 }
 
 .woman {
